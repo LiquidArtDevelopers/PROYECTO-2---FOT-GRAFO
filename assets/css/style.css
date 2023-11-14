@@ -1,4 +1,4 @@
-/* GENÉRICOS */
+/* ESTÍLOS GENÉRICOS */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@
 }
 @font-face {
   font-family: "fuente2";
-  src: url("../fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf");
+  src: url("../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
 }
 @font-face {
   font-family: "fuente3";
@@ -19,9 +19,9 @@
 }
 :root{  
     --color0: white;
-    --color1: rgb(43, 43, 43);
-    --color2: rgb(119, 119, 119);
-    --color3: rgb(122, 50, 50);
+    --color1: rgb(42, 42, 42);
+    --color2: rgb(126, 126, 126);
+    --color3: rgb(118, 45, 45);
     
     --fuente1: "fuente1";
     --fuente2: "fuente2";
@@ -41,12 +41,13 @@ h2{
   font-weight: 100;
 }
 h3{
-  width: 100%;
-  font-family: var(--fuente2);
+  /* width: 100%;
+  text-align: left; */
+
   font-size: 2rem;
   color: var(--color1);
   font-weight: 100;
-  text-align: left;
+  
 }
 h4{
   font-size: 1.2rem;
@@ -59,6 +60,31 @@ p{
   font-size: 1.1rem;
   letter-spacing: 1px;
   line-height: 1.6rem;
+}
+.boton{
+  background-color: var(--color0);
+
+  padding: .5rem 5rem;
+  border-radius: 1rem;
+  border: .5px solid var(--color1);
+
+  font-size: 1.2rem;
+  font-family: var(--fuente3);
+  color: var(--color2);
+  font-weight:100;
+  letter-spacing: 3px;
+  
+  cursor: pointer;
+}
+.boton:hover{
+  background-color: var(--color2);
+  color: var(--color0);
+  transition: .5s;
+  border: .5px solid var(--color0);
+}
+.boton:active{
+  transform: scale(.95);
+  transition: .1ms;
 }
 
 
@@ -143,12 +169,14 @@ header .contenedor{
   margin-top: .5vh;
   margin-left: 2rem;
 
+  background-color: aquamarine;
+  width: 700px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  row-gap: 2px;
-
+  
   font-family: var(--fuente1);
   color: var(--color0);
 
@@ -190,35 +218,9 @@ header .contenedor :nth-child(8){
 
 /* MAIN */
 
-/* GENÉRICO */
-.boton{
-  background-color: var(--color0);
-
-  padding: .5rem 5rem;
-  border-radius: 1rem;
-  border: .5px solid var(--color1);
-
-  font-size: 1.2rem;
-  font-family: var(--fuente3);
-  color: var(--color2);
-  font-weight:100;
-  letter-spacing: 3px;
-  
-  cursor: pointer;
-}
-.boton:hover{
-  background-color: var(--color2);
-  color: var(--color0);
-  transition: .5s;
-  border: .5px solid var(--color0);
-}
-.boton:active{
-  transform: scale(.95);
-  transition: .1ms;
-}
-
 /* SECCIÓN PRESENTACIÓN */
 #sectPresentacion{
+  background-color: rgb(229, 164, 242);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -226,7 +228,8 @@ header .contenedor :nth-child(8){
   justify-content: flex-start;
   margin-top: 2rem;
 }
-#sectPresentacion article{  
+#sectPresentacion article{
+  background-color: antiquewhite;
   max-width: 1200px;
   width: 95%;
   margin-top: 2rem;
