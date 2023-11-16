@@ -40,6 +40,7 @@ h2{
   font-size: 1.8rem;
   color: var(--color2);
   font-weight: 100;
+  margin: 2rem 0;
 }
 h3{
   width: 100%;
@@ -97,37 +98,25 @@ nav, header, main, footer{
   align-items: flex-start;
   justify-content: flex-start;
 }
-section{
+section, article{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start;  
+}
+section{
   margin-top: 2rem;
+}
+article{
+  margin-top: 2rem;
+  row-gap: 1rem;
 }
 .anchoEstrecho{
   max-width: 1200px;
   width: 95%;
-  margin-top: 2rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  row-gap: 2rem;
+  margin-top: 0;  
 }
-.anchoCompleto{
-  max-width: 2560px;
-  width: 100%;
-  margin-top: 2rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  row-gap: 2rem;
-}
-
 
 /* NAV */
 nav{
@@ -339,4 +328,51 @@ header .contenedor :nth-child(8){
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+/* SECCIÓN QUIENES SOMOS */
+#contenedorEquipo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#contenedorEquipo .persona{
+  width: 100%;
+  max-width: 350px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 1rem;
+}
+#contenedorEquipo .persona .avatar{
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+#contenedorEquipo .persona p{
+  
+  text-align: center;
+}
+#contenedorEquipo .persona .avatar :nth-child(1){
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: 1s;
+}
+#contenedorEquipo .persona .avatar :nth-child(2){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(.7);
+  border-radius: 50%;
+  filter:sepia(1) opacity(.3);
+  transition: 1s;
+}
+#contenedorEquipo .persona .avatar :nth-child(2):hover{
+  filter:sepia(0) opacity(.8);  
 }

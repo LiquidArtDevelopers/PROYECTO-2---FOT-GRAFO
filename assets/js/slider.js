@@ -105,3 +105,9 @@ function crearIntervalo(valorRecibido){
     //creamos el intervalo en bucle donde ejecutará cada "valor de tiempo" la función random (que lo que hace es elegir un num random del 1 al 10 y mostrar la imagen en grande con dicho número)
     intervalo = window.setInterval(random,valorRecibido)
 }
+
+
+
+
+
+
