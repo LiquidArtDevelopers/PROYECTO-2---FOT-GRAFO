@@ -48,7 +48,9 @@ h3{
 
   font-size: 2rem;
   color: var(--color1);
-  font-weight: 100;  
+  font-weight: 100;
+
+  margin-top: 2rem;
 }
 h4{
   font-size: 1.2rem;
@@ -115,7 +117,6 @@ article{
 .anchoEstrecho{
   max-width: 1200px;
   width: 95%;
-  margin-top: 0;  
 }
 
 /* NAV */
