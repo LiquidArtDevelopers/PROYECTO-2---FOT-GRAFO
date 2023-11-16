@@ -47,8 +47,7 @@ h3{
 
   font-size: 2rem;
   color: var(--color1);
-  font-weight: 100;
-  
+  font-weight: 100;  
 }
 h4{
   font-size: 1.2rem;
@@ -89,7 +88,7 @@ p{
 }
 
 
-/* NAV */
+/* CAJAS PRINCIPALES */
 nav, header, main, footer{
   width: 100%;
   max-width: 2560px;
@@ -98,6 +97,39 @@ nav, header, main, footer{
   align-items: flex-start;
   justify-content: flex-start;
 }
+section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+.anchoEstrecho{
+  max-width: 1200px;
+  width: 95%;
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 2rem;
+}
+.anchoCompleto{
+  max-width: 2560px;
+  width: 100%;
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 2rem;
+}
+
+
+/* NAV */
 nav{
   position: fixed;
   z-index: 100;
@@ -230,25 +262,7 @@ header .contenedor :nth-child(8){
 
 /* SECCIÓN PRESENTACIÓN */
 /* ARTÍCULO PRESENTACIÓN */
-#sectPresentacion{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 2rem;
-}
-#sectPresentacion article{
-  max-width: 1200px;
-  width: 95%;
-  margin-top: 2rem;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  row-gap: 2rem;
-}
 /* ARTÍCULO SERVICIOS */
 #contenedorServicios{
   width: 100%;
@@ -290,9 +304,10 @@ header .contenedor :nth-child(8){
   transform: scale(1.2);
 }
 
+/* SECCIÓN ÁLBUM */
 /* ARTÍCULO SLIDER */
 #slider{
-  width: 100vw;
+  width: 100%;
   max-width: 2560px;
   height:95vh;
   position: relative;

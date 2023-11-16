@@ -31,7 +31,7 @@ flechaIzd.addEventListener("click", function(){
     }
 
     /* cambiamos el SRC de la foto teniendo en cuenta el número que corresponde */
-    fotoActiva.src = `./assets/img/slider${ordenSiguiente}.jpg`;
+    fotoActiva.src = `./assets/img/slider${ordenSiguiente}_2560.jpg`;
     /* cambiamos el valor del atributo orden */
     fotoActiva.setAttribute("orden", ordenSiguiente);
 
@@ -60,7 +60,7 @@ flechaDer.addEventListener("click", function(){
     }
 
     /* cambiamos el SRC de la foto teniendo en cuenta el número que corresponde */
-    fotoActiva.src = `./assets/img/slider${ordenSiguiente}.jpg`;
+    fotoActiva.src = `./assets/img/slider${ordenSiguiente}_2560.jpg`;
     /* cambiamos el valor del atributo orden */
     fotoActiva.setAttribute("orden", ordenSiguiente);
 
@@ -85,7 +85,7 @@ function random(){
     numAleatorio = Math.random()*numFotos; /* obtenemos un número entre 1 y 10 (incluyendo decimales) */
     numAleatorio = Math.ceil(numAleatorio) /* redondeamos a número entero el resultado */
     
-    fotoActiva.src=`./assets/img/slider${numAleatorio}.jpg` /* asignamos el src con el nuevo número */
+    fotoActiva.src=`./assets/img/slider${numAleatorio}_2560.jpg` /* asignamos el src con el nuevo número */
     fotoActiva.setAttribute("orden", numAleatorio)
 }
 
