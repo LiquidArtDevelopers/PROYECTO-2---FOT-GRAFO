@@ -1,5 +1,6 @@
 /* DECLARACIÓN DE VARIABLES */
 
+
 var numFotos = 12;/* número total de fotos para el slider */
 var ordenPrincipal, ordenSiguiente;
 var intervalo, temporizador;
@@ -8,6 +9,8 @@ var tiempoEspera = 5000;
 const flechaIzd = document.getElementById("flechaIzd");
 const flechaDer = document.getElementById("flechaDer");
 const fotoActiva = document.getElementById("fotoActiva");
+
+
 
 /* -----------ACCIÓN DE FLECHAS AL PULSAR, PASAR ADELANTE O ATRÁS EN INFINITO------ */
 
@@ -20,14 +23,13 @@ flechaIzd.addEventListener("click", function(){
 
     /* lo pasamos a número para poder operar */
     ordenPrincipal = Number(ordenPrincipal);
+    
 
     /* condición para controlar que no se salga del total de fotos */
-    if(ordenPrincipal===1){
-        /* si el orden actual es 1, y restamos una posición, pasamos al orden 10 */
+    if (ordenPrincipal === 1) {
         ordenSiguiente = numFotos;
     }else{
-        /* en caso de cualquier otro orden, restamos una posición de orden */
-        ordenSiguiente = ordenPrincipal-1;
+        ordenSiguiente = ordenPrincipal - 1;
     }
 
     /* cambiamos el SRC de la foto teniendo en cuenta el número que corresponde */
@@ -36,7 +38,7 @@ flechaIzd.addEventListener("click", function(){
     fotoActiva.setAttribute("orden", ordenSiguiente);
 
     /* cuando pulsamos en la flecha, quitamos el temporizador actual y creamos uno nuevo de otros 5seg */
-    clearTimeout(temporizador)
+    clearTimeout(temporizador);
     crearIntervalo(tiempoEspera);
 })
 
