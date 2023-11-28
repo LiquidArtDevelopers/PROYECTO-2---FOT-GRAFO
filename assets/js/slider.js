@@ -14,7 +14,6 @@ const fotoActiva = document.getElementById("fotoActiva");
 
 /* -----------ACCIÓN DE FLECHAS AL PULSAR, PASAR ADELANTE O ATRÁS EN INFINITO------ */
 
-
 /* ESCUCHAMOS CLICK EN ELEMENTO FLECHA IZD */
 flechaIzd.addEventListener("click", function(){
 
@@ -41,7 +40,6 @@ flechaIzd.addEventListener("click", function(){
     clearTimeout(temporizador);
     crearIntervalo(tiempoEspera);
 })
-
 
 /* ESCUCHAMOS CLICK EN ELEMENTO FLECHA DER */
 flechaDer.addEventListener("click", function(){
@@ -72,11 +70,7 @@ flechaDer.addEventListener("click", function(){
 })
 
 
-
 /* -----------------IMAGEN RANDOM CADA VEZ QUE CARGUE A WEB------------- */
-
-/* LLAMAMOS A LA FUNCIÓN RANDOM PARA QUE CARGUE UNA IMAGEN DE LAS EXISTENTES DIFERENTES */
-random();
 
 
 /* FUNCIÓN RANDOM */
@@ -90,6 +84,14 @@ function random(){
     fotoActiva.src=`./assets/img/slider${numAleatorio}_2560.jpg` /* asignamos el src con el nuevo número */
     fotoActiva.setAttribute("orden", numAleatorio)
 }
+
+/* LLAMAMOS A LA FUNCIÓN RANDOM PARA QUE CARGUE UNA IMAGEN DE LAS EXISTENTES DIFERENTES */
+random();
+
+
+
+
+
 
 
 
