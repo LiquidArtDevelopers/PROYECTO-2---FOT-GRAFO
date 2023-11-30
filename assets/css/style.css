@@ -353,8 +353,7 @@ header .contenedor :nth-child(8){
   height: 350px;
   position: relative;
 }
-#contenedorEquipo .persona p{
-  
+#contenedorEquipo .persona p{  
   text-align: center;
 }
 #contenedorEquipo .persona .avatar :nth-child(1){

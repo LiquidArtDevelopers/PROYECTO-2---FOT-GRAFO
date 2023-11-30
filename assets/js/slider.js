@@ -3,7 +3,7 @@
 
 var numFotos = 12;/* número total de fotos para el slider */
 var ordenPrincipal, ordenSiguiente;
-var intervalo, temporizador;
+var intervalo
 var tiempoEspera = 5000;
 
 const flechaIzd = document.getElementById("flechaIzd");
@@ -37,7 +37,6 @@ flechaIzd.addEventListener("click", function(){
     fotoActiva.setAttribute("orden", ordenSiguiente);
 
     /* cuando pulsamos en la flecha, quitamos el temporizador actual y creamos uno nuevo de otros 5seg */
-    clearTimeout(temporizador);
     crearIntervalo(tiempoEspera);
 })
 
@@ -65,7 +64,6 @@ flechaDer.addEventListener("click", function(){
     fotoActiva.setAttribute("orden", ordenSiguiente);
 
     /* cuando pulsamos en la flecha, quitamos el temporizador actual y creamos uno nuevo de otros 5seg */
-    clearTimeout(temporizador)
     crearIntervalo(tiempoEspera);
 })
 
