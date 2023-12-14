@@ -384,9 +384,10 @@ footer{
   background-color: var(--color1);
 
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 2rem;
 
   color:var(--color0);
   font-family: var(--fuente3);
@@ -445,16 +446,68 @@ footer{
   font-size: 1.5rem;
   font-weight: 100;
 }
+
 #contenedor_footer .info_footer ul img{
   width: 30px;
-  filter: invert(21%) sepia(22%) saturate(2155%) hue-rotate(324deg) brightness(97%) contrast(84%);
+  
 }
-
-.lista_horizonal{
+#contenedor_footer .info_footer a{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   column-gap: 2rem;
 }
+#contenedor_footer .info_footer a:hover{
+  filter: invert(21%) sepia(22%) saturate(2155%) hue-rotate(324deg) brightness(97%) contrast(84%);
+}
+.iconos_contacto{
+  width: 20px;
+  filter: invert(1);
 
+}
+#contenedor_rrss{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 3rem;
+}
+#contenedor_rrss img{
+  width: 30px;
+}
+#contenedor_form{
+  width: 100%;
+  max-width: 2560px;
+  height: 500px;
+  background-color: aquamarine;
+
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  column-gap: 5rem;
+}
+footer form{
+  width: 40%;
+  min-width: 320px;
+  max-width: 800px;
+  background-color: rgb(29, 29, 29);
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+footer form input, textarea{
+  width: 100%;
+
+
+}
+#boton_form{
+  width: 10%;
+  min-width: 160px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
