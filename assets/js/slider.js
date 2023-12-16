@@ -1,16 +1,18 @@
 /* DECLARACIÓN DE VARIABLES */
 
+
 var numFotos = 12;/* número total de fotos para el slider */
 var ordenPrincipal, ordenSiguiente;
-var intervalo, temporizador;
+var intervalo
 var tiempoEspera = 5000;
 
 const flechaIzd = document.getElementById("flechaIzd");
 const flechaDer = document.getElementById("flechaDer");
 const fotoActiva = document.getElementById("fotoActiva");
 
-/* -----------ACCIÓN DE FLECHAS AL PULSAR, PASAR ADELANTE O ATRÁS EN INFINITO------ */
 
+
+/* -----------ACCIÓN DE FLECHAS AL PULSAR, PASAR ADELANTE O ATRÁS EN INFINITO------ */
 
 /* ESCUCHAMOS CLICK EN ELEMENTO FLECHA IZD */
 flechaIzd.addEventListener("click", function(){
@@ -20,14 +22,13 @@ flechaIzd.addEventListener("click", function(){
 
     /* lo pasamos a número para poder operar */
     ordenPrincipal = Number(ordenPrincipal);
+    
 
     /* condición para controlar que no se salga del total de fotos */
-    if(ordenPrincipal===1){
-        /* si el orden actual es 1, y restamos una posición, pasamos al orden 10 */
+    if (ordenPrincipal === 1) {
         ordenSiguiente = numFotos;
     }else{
-        /* en caso de cualquier otro orden, restamos una posición de orden */
-        ordenSiguiente = ordenPrincipal-1;
+        ordenSiguiente = ordenPrincipal - 1;
     }
 
     /* cambiamos el SRC de la foto teniendo en cuenta el número que corresponde */
@@ -36,10 +37,8 @@ flechaIzd.addEventListener("click", function(){
     fotoActiva.setAttribute("orden", ordenSiguiente);
 
     /* cuando pulsamos en la flecha, quitamos el temporizador actual y creamos uno nuevo de otros 5seg */
-    clearTimeout(temporizador)
     crearIntervalo(tiempoEspera);
 })
-
 
 /* ESCUCHAMOS CLICK EN ELEMENTO FLECHA DER */
 flechaDer.addEventListener("click", function(){
@@ -65,16 +64,11 @@ flechaDer.addEventListener("click", function(){
     fotoActiva.setAttribute("orden", ordenSiguiente);
 
     /* cuando pulsamos en la flecha, quitamos el temporizador actual y creamos uno nuevo de otros 5seg */
-    clearTimeout(temporizador)
     crearIntervalo(tiempoEspera);
 })
 
 
-
 /* -----------------IMAGEN RANDOM CADA VEZ QUE CARGUE A WEB------------- */
-
-/* LLAMAMOS A LA FUNCIÓN RANDOM PARA QUE CARGUE UNA IMAGEN DE LAS EXISTENTES DIFERENTES */
-random();
 
 
 /* FUNCIÓN RANDOM */
@@ -88,6 +82,14 @@ function random(){
     fotoActiva.src=`./assets/img/slider${numAleatorio}_2560.jpg` /* asignamos el src con el nuevo número */
     fotoActiva.setAttribute("orden", numAleatorio)
 }
+
+/* LLAMAMOS A LA FUNCIÓN RANDOM PARA QUE CARGUE UNA IMAGEN DE LAS EXISTENTES DIFERENTES */
+random();
+
+
+
+
+
 
 
 
