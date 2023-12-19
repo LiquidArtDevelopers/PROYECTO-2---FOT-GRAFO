@@ -160,12 +160,12 @@
 
     <footer>
         <div id="contenedor_form">
-            <form action="" method="post">
+            <form action="./php/enviar.php" method="post">
                 <h2>Contacta con Nosotros</h2>
-                <input type="text" required>
-                <input type="email">
-                <input type="tel">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <input type="text" name="nombre" required>
+                <input type="email" name="correo">
+                <input type="tel" name="telefono">
+                <textarea name="mensaje" id=""></textarea>
                 <input type="submit" class="boton" id="boton_form" value="ENVIAR">
 
             </form>
